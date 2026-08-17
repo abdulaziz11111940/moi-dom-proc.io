@@ -1,0 +1,45 @@
+{
+	admin off
+}
+
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	request_body {
+		max_size 25MB
+	}
+
+	header {
+		-Server
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+	}
+
+	@sso path /sso/*
+	handle @sso {
+		reverse_proxy keycloak:8080
+	}
+
+	@api path /api/*
+	handle @api {
+		reverse_proxy api:4000 {
+			header_up X-Real-IP {remote_host}
+			header_up X-Forwarded-Proto {scheme}
+		}
+	}
+
+	handle {
+		reverse_proxy web:3000 {
+			header_up X-Real-IP {remote_host}
+			header_up X-Forwarded-Proto {scheme}
+		}
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}

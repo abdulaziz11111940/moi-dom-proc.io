@@ -1,0 +1,486 @@
+{
+  "generatedFrom": "localhost.sql / femida_store.db (легаси ЕИАС «Фемида»)",
+  "note": "Только справочные значения. Персональные данные, хеши паролей и Discord ID не выгружаются.",
+  "roles": [
+    "Администратор",
+    "Прокурор субъекта",
+    "Руководитель",
+    "Сотрудник",
+    "Старший помощник",
+    "Федеральный уровень"
+  ],
+  "subjects": [
+    "Арбатский Федеральный Округ (АФО)",
+    "Генеральная прокуратура",
+    "Кутузовский Федеральный Округ (КФО)",
+    "Патриарший Федеральный Округ (ПФО)",
+    "Патрики",
+    "Рублевский Федеральный Округ (РФО)",
+    "Тверской Федеральный Округ (ТФО)"
+  ],
+  "positions": [
+    {
+      "id": "s1",
+      "title": "Помощник прокурора",
+      "role": "Сотрудник",
+      "group": "Сотрудники субъекта",
+      "subject": null
+    },
+    {
+      "id": "s4",
+      "title": "Советник прокурора",
+      "role": "Сотрудник",
+      "group": "Сотрудники субъекта",
+      "subject": null
+    },
+    {
+      "id": "ss1",
+      "title": "Старший помощник прокурора",
+      "role": "Старший помощник",
+      "group": "Сотрудники субъекта",
+      "subject": null
+    },
+    {
+      "id": "ss2",
+      "title": "Заместитель начальника отдела",
+      "role": "Старший помощник",
+      "group": "Сотрудники субъекта",
+      "subject": null
+    },
+    {
+      "id": "usp1",
+      "title": "Прокурор УСБ",
+      "role": "Прокурор УСБ",
+      "group": "Управление собственной безопасности",
+      "subject": null
+    },
+    {
+      "id": "usp2",
+      "title": "Старший прокурор УСБ",
+      "role": "Прокурор УСБ",
+      "group": "Управление собственной безопасности",
+      "subject": null
+    },
+    {
+      "id": "b1",
+      "title": "Прокурор субъекта",
+      "role": "Прокурор субъекта",
+      "group": "Руководство субъекта",
+      "subject": null
+    },
+    {
+      "id": "b3",
+      "title": "Старший прокурор субъекта",
+      "role": "Руководитель",
+      "group": "Руководство субъекта",
+      "subject": null
+    },
+    {
+      "id": "b4",
+      "title": "Начальник отдела",
+      "role": "Руководитель",
+      "group": "Руководство субъекта",
+      "subject": null
+    },
+    {
+      "id": "f1",
+      "title": "Генеральный прокурор РФ",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f8",
+      "title": "Первый заместитель Генерального прокурора РФ",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f2",
+      "title": "Заместитель Генерального прокурора РФ",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f6",
+      "title": "Помощник Генерального прокурора по особым поручениям",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f5",
+      "title": "Помощник заместителя Генерального прокурора РФ",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f4",
+      "title": "Начальник управления",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f7",
+      "title": "Советник Генерального прокурора",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "f3",
+      "title": "Старший советник Генеральной прокуратуры",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "pos-new-1780234983554",
+      "title": "Сотрудник Главного организационно-аналитического управления",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "pos-new-1780237791462",
+      "title": "Сотрудник Главного управления по надзору за следствием, дознанием и оперативно-розыскной деятельностью",
+      "role": "Федеральный уровень",
+      "group": "Генеральная прокуратура",
+      "subject": null
+    },
+    {
+      "id": "pos-new-1780808183563",
+      "title": "Начальник УОПД",
+      "role": "Прокурор субъекта",
+      "group": "Руководство субъекта",
+      "subject": null
+    },
+    {
+      "id": "pos-new-1780835983452",
+      "title": "Первый заместитель прокурора субъекта",
+      "role": "Прокурор субъекта",
+      "group": "Руководство субъекта",
+      "subject": null
+    },
+    {
+      "id": "pos-new-1780835985196",
+      "title": "Заместитель прокурора субъекта",
+      "role": "Прокурор субъекта",
+      "group": "Руководство субъекта",
+      "subject": null
+    }
+  ],
+  "classRanks": [
+    {
+      "id": "cr0",
+      "title": "Младший юрист"
+    },
+    {
+      "id": "cr1",
+      "title": "Юрист 3 класса"
+    },
+    {
+      "id": "cr2",
+      "title": "Юрист 2 класса"
+    },
+    {
+      "id": "cr3",
+      "title": "Юрист 1 класса"
+    },
+    {
+      "id": "cr4",
+      "title": "Младший советник юстиции"
+    },
+    {
+      "id": "cr5",
+      "title": "Советник юстиции"
+    },
+    {
+      "id": "cr6",
+      "title": "Старший советник юстиции"
+    },
+    {
+      "id": "cr7",
+      "title": "Государственный советник юстиции 3 класса"
+    },
+    {
+      "id": "cr8",
+      "title": "Государственный советник юстиции 2 класса"
+    },
+    {
+      "id": "cr9",
+      "title": "Государственный советник юстиции 1 класса"
+    },
+    {
+      "id": "cr10",
+      "title": "Действительный государственный советник юстиции"
+    }
+  ],
+  "medals": [
+    {
+      "id": "med1",
+      "title": "За безупречную службу"
+    },
+    {
+      "id": "med2",
+      "title": "За укрепление законности"
+    },
+    {
+      "id": "med3",
+      "title": "Почётный работник прокуратуры"
+    },
+    {
+      "id": "med4",
+      "title": "За взаимодействие и служебную дисциплину"
+    }
+  ],
+  "bonusSettings": {
+    "baseAmount": 2500000,
+    "baseAmountByRole": {
+      "Сотрудник": 2500000,
+      "Старший помощник": 2500000,
+      "Прокурор УСБ": 4000000,
+      "Прокурор субъекта": 4000000,
+      "Руководитель": 4000000,
+      "Федеральный уровень": 4000000,
+      "Администратор": 4000000
+    },
+    "maxMultiplier": 2,
+    "approvalRequired": true,
+    "payPeriod": "biweekly",
+    "reportDeadlineDays": 7,
+    "payoutRoles": [
+      "Федеральный уровень",
+      "Администратор"
+    ],
+    "reasons": [
+      "За высокие показатели надзорной деятельности",
+      "За организацию и проведение проверок",
+      "За качественную работу с обращениями граждан",
+      "За участие в координационных мероприятиях",
+      "За дисциплину и служебную исполнительность",
+      "Единовременное поощрение"
+    ]
+  },
+  "caseTypes": [],
+  "caseStatuses": [
+    "archive",
+    "assigned_staff",
+    "assigned_supervisor",
+    "check_terminated",
+    "completed",
+    "criminal_case_opened",
+    "criminal_case_refused",
+    "preliminary_check",
+    "prosecution_approved",
+    "prosecution_refused",
+    "prosecution_review",
+    "registered",
+    "sent_to_court",
+    "transferred_investigation",
+    "verdict_acquitted"
+  ],
+  "caseSources": [
+    "forum",
+    "fsb_transfer",
+    "oral",
+    "other",
+    "sk_transfer"
+  ],
+  "caseSeverities": [
+    "medium",
+    "minor",
+    "serious"
+  ],
+  "appealKeys": [
+    "id",
+    "appealType",
+    "priority",
+    "subject",
+    "applicantName",
+    "applicantContact",
+    "description",
+    "responsibleId",
+    "responsibleName",
+    "authorId",
+    "authorName",
+    "status",
+    "receivedDate",
+    "deadlineDate",
+    "resolvedDate",
+    "response",
+    "isAnonymous",
+    "createdAt",
+    "updatedAt",
+    "version",
+    "archived"
+  ],
+  "appealStatuses": [
+    "в работе",
+    "закрыто",
+    "зарегистрировано",
+    "на рассмотрении",
+    "ответ направлен"
+  ],
+  "appealTypes": [],
+  "inspectionKeys": [
+    "id",
+    "inspectionType",
+    "subject",
+    "targetOrg",
+    "description",
+    "responsibleId",
+    "responsibleName",
+    "authorId",
+    "authorName",
+    "participants",
+    "status",
+    "startDate",
+    "endDate",
+    "result",
+    "violations",
+    "recommendations",
+    "createdAt",
+    "updatedAt",
+    "version",
+    "archived"
+  ],
+  "inspectionStatuses": [
+    "в процессе",
+    "завершена",
+    "на согласовании",
+    "планируется"
+  ],
+  "bonusStatuses": [
+    "approved",
+    "paid",
+    "pending",
+    "rejected"
+  ],
+  "activityTypes": [],
+  "auditActions": [
+    "activity.created",
+    "activity.material.attached",
+    "activity.updated",
+    "auth.login.failed",
+    "auth.login.success",
+    "auth.logout",
+    "auth.password.changed",
+    "auth.profile.updated",
+    "bonuses.approve",
+    "bonuses.created",
+    "bonuses.mark-paid",
+    "bonuses.proof_uploaded",
+    "bonuses.reject",
+    "bonuses.return",
+    "bonuses.submit",
+    "bonuses.updated",
+    "case.assigned",
+    "case.comment_added",
+    "case.created",
+    "case.deadline_extended",
+    "case.deleted",
+    "case.image_uploaded",
+    "case.link_added",
+    "case.status_changed",
+    "case.supervisor_assigned",
+    "directory.updated",
+    "inspections.created",
+    "inspections.updated",
+    "portal_records.portal_save.delete",
+    "portal_records.portal_save.upsert",
+    "registration.approved",
+    "registration.created",
+    "registration.merged",
+    "registration.rejected",
+    "secondments.created",
+    "user.admin.user.status",
+    "user.profile.identity.update",
+    "user.register.request",
+    "users.account.deleted",
+    "users.archived",
+    "users.avatar.removed",
+    "users.avatar.updated",
+    "users.blocked",
+    "users.created",
+    "users.password.reset",
+    "users.profile.updated",
+    "users.role.changed",
+    "users.service_fields.updated",
+    "users.status.changed"
+  ],
+  "registrationStatuses": [
+    "approved",
+    "pending",
+    "rejected"
+  ],
+  "secondmentKeys": [
+    "id",
+    "userId",
+    "fromSubject",
+    "toSubject",
+    "status",
+    "createdBy",
+    "createdAt",
+    "endsAt",
+    "note"
+  ],
+  "statistics": {
+    "users": 212,
+    "usersByRole": {
+      "Сотрудник": 144,
+      "Прокурор субъекта": 25,
+      "Руководитель": 18,
+      "Старший помощник": 14,
+      "Федеральный уровень": 9,
+      "Администратор": 2
+    },
+    "usersBySubject": {
+      "Рублевский Федеральный Округ (РФО)": 71,
+      "Кутузовский Федеральный Округ (КФО)": 36,
+      "Патриарший Федеральный Округ (ПФО)": 35,
+      "Тверской Федеральный Округ (ТФО)": 30,
+      "Арбатский Федеральный Округ (АФО)": 28,
+      "Генеральная прокуратура": 11,
+      "Патрики": 1
+    },
+    "usersByStatus": {
+      "active": 103,
+      "archived": 98,
+      "blocked": 11
+    },
+    "registrationRequests": 417,
+    "registrationByStatus": {
+      "rejected": 283,
+      "approved": 130,
+      "pending": 4
+    },
+    "cases": 970,
+    "casesByStatus": {
+      "archive": 783,
+      "criminal_case_opened": 39,
+      "check_terminated": 28,
+      "transferred_investigation": 27,
+      "registered": 17,
+      "preliminary_check": 17,
+      "sent_to_court": 17,
+      "completed": 11,
+      "assigned_supervisor": 6,
+      "assigned_staff": 6,
+      "prosecution_review": 6,
+      "prosecution_refused": 5,
+      "prosecution_approved": 4,
+      "criminal_case_refused": 3,
+      "verdict_acquitted": 1
+    },
+    "appeals": 691,
+    "inspections": 11,
+    "bonuses": 82,
+    "activityRecords": 1590,
+    "auditEntries": 4074
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "@femida/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    // DOM подключён ради конструктора URL: он доступен и в браузере, и в Node,
+    // и используется при проверке ссылок на внешние материалы.
+    "lib": ["ES2022", "DOM"],
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "src/**/*.test.ts"]
+}

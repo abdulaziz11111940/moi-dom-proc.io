@@ -1,0 +1,229 @@
+{
+  "realm": "femida",
+  "displayName": "ЕИАС «Фемида»",
+  "displayNameHtml": "<b>ЕИАС «Фемида»</b>",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "registrationEmailAsUsername": false,
+  "rememberMe": true,
+  "verifyEmail": false,
+  "loginWithEmailAllowed": false,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "editUsernameAllowed": false,
+  "bruteForceProtected": true,
+  "permanentLockout": false,
+  "maxFailureWaitSeconds": 180,
+  "waitIncrementSeconds": 180,
+  "quickLoginCheckMilliSeconds": 1000,
+  "minimumQuickLoginWaitSeconds": 180,
+  "maxDeltaTimeSeconds": 43200,
+  "failureFactor": 5,
+  "accessTokenLifespan": 43200,
+  "accessTokenLifespanForImplicitFlow": 900,
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 36000,
+  "offlineSessionIdleTimeout": 2592000,
+  "defaultSignatureAlgorithm": "RS256",
+  "passwordPolicy": "length(8) and digits(1) and notUsername(undefined)",
+  "roles": {
+    "realm": [
+      {
+        "name": "EMPLOYEE",
+        "description": "Сотрудник",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "SENIOR_ASSISTANT",
+        "description": "Старший помощник",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "USP",
+        "description": "Управление собственной безопасности",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "BOSS",
+        "description": "Руководитель округа",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "FEDERAL",
+        "description": "Федеральный уровень",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "ADMIN",
+        "description": "Администратор системы",
+        "composite": false,
+        "clientRole": false
+      }
+    ]
+  },
+  "groups": [
+    {
+      "name": "subjects",
+      "path": "/subjects",
+      "attributes": {},
+      "subGroups": [
+        {
+          "name": "GENERAL",
+          "path": "/subjects/GENERAL",
+          "attributes": { "subjectCode": ["GENERAL"] },
+          "subGroups": []
+        },
+        {
+          "name": "RUBLEVSKY",
+          "path": "/subjects/RUBLEVSKY",
+          "attributes": { "subjectCode": ["RUBLEVSKY"] },
+          "subGroups": []
+        },
+        {
+          "name": "ARBATSKY",
+          "path": "/subjects/ARBATSKY",
+          "attributes": { "subjectCode": ["ARBATSKY"] },
+          "subGroups": []
+        },
+        {
+          "name": "PATRIARSHY",
+          "path": "/subjects/PATRIARSHY",
+          "attributes": { "subjectCode": ["PATRIARSHY"] },
+          "subGroups": []
+        },
+        {
+          "name": "TVERSKOY",
+          "path": "/subjects/TVERSKOY",
+          "attributes": { "subjectCode": ["TVERSKOY"] },
+          "subGroups": []
+        },
+        {
+          "name": "KUTUZOVSKY",
+          "path": "/subjects/KUTUZOVSKY",
+          "attributes": { "subjectCode": ["KUTUZOVSKY"] },
+          "subGroups": []
+        }
+      ]
+    }
+  ],
+  "defaultRoles": ["offline_access", "uma_authorization"],
+  "clients": [
+    {
+      "clientId": "femida-web",
+      "name": "ЕИАС «Фемида» — веб-интерфейс",
+      "description": "Публичный клиент frontend. Поток Authorization Code с PKCE.",
+      "enabled": true,
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "rootUrl": "http://localhost",
+      "baseUrl": "/",
+      "redirectUris": [
+        "http://localhost/*",
+        "http://localhost:3000/*"
+      ],
+      "webOrigins": ["http://localhost", "http://localhost:3000"],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost/login##http://localhost:3000/login"
+      },
+      "protocolMappers": [
+        {
+          "name": "full-name-as-fio",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "fullName",
+            "claim.name": "full_name",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "name": "subject-code",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "subjectCode",
+            "claim.name": "subject_code",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "name": "realm-roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "realm_access.roles",
+            "jsonType.label": "String",
+            "multivalued": "true",
+            "access.token.claim": "true",
+            "id.token.claim": "false"
+          }
+        },
+        {
+          "name": "audience-femida-api",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "consentRequired": false,
+          "config": {
+            "included.client.audience": "femida-api",
+            "access.token.claim": "true",
+            "id.token.claim": "false"
+          }
+        }
+      ]
+    },
+    {
+      "clientId": "femida-api",
+      "name": "ЕИАС «Фемида» — API",
+      "description": "Конфиденциальный клиент backend. Проверка токенов и служебные операции.",
+      "enabled": true,
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "attributes": {
+        "access.token.lifespan": "300"
+      },
+      "protocolMappers": [
+        {
+          "name": "audience-self",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "consentRequired": false,
+          "config": {
+            "included.client.audience": "femida-api",
+            "access.token.claim": "true",
+            "id.token.claim": "false"
+          }
+        }
+      ]
+    }
+  ],
+  "users": [],
+  "smtpServer": {},
+  "eventsEnabled": true,
+  "eventsExpiration": 604800,
+  "adminEventsEnabled": true,
+  "adminEventsDetailsEnabled": true
+}
